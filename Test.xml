@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+  <test name="chrome">
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <parameter name= "browser" value="chrome"/>
+    <classes>
+    
+    <class name="Test.Launch" priority='1'/>
+       <class name="Test.Test3" priority='2'/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="firefox">
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <parameter name="browser" value="firefox"/>
+    <classes>
+    <class name="Test.Launch" priority='1'/>
+       <class name="Test.Test3" priority='2'/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

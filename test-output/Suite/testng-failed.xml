@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Test.Test3">
+        <methods>
+          <include name="Logout_Img"/>
+          <include name="Login_Button"/>
+          <include name="Login_link"/>
+          <include name="Logout_Link"/>
+        </methods>
+      </class> <!-- Test.Test3 -->
+    </classes>
+  </test> <!-- chrome(failed) -->
+  <test thread-count="5" name="firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="Test.Launch">
+        <methods>
+          <include name="LaunchBrowser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.Launch -->
+      <class name="Test.Test3">
+        <methods>
+          <include name="Logout_Img"/>
+          <include name="Logout_Link"/>
+        </methods>
+      </class> <!-- Test.Test3 -->
+    </classes>
+  </test> <!-- firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
